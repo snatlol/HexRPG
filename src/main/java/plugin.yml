@@ -1,0 +1,6 @@
+name: HexRPG
+version: '${project.version}'
+main: com.snat.main.Main
+api-version: 1.18
+authors: [ snat ]
+description: RPG plugin for HexNation!
