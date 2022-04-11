@@ -1,4 +1,4 @@
-package com.snat.main.compoments;
+package com.snat.main.components;
 
 import org.bukkit.Location;
 import org.bukkit.inventory.ItemStack;
@@ -31,6 +31,6 @@ public class LootItem {
         ItemStack item = this.item.clone();
         item.setAmount(amount);
         loc.getWorld().dropItemNaturally(loc, item);
-
     }
+
 }

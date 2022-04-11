@@ -16,13 +16,14 @@ public class Utils {
     public static String color(String string) {
         return ChatColor.translateAlternateColorCodes('&', string);
     }
+
     public static void msgPlayer(Player player, String... strings) {
-        for(String string : strings) {
+        for (String string : strings) {
             player.sendMessage(color(string));
         }
     }
 
-    public static ItemStack createItem(Material type, int amount, boolean glow, boolean unbreakable,boolean hideUnb, String name, String... lines) {
+    public static ItemStack createItem(Material type, int amount, boolean glow, boolean unbreakable, boolean hideUnb, String name, String... lines) {
         ItemStack item = new ItemStack(type, amount);
         ItemMeta meta = item.getItemMeta();
         if (glow) {
@@ -56,4 +57,5 @@ public class Utils {
         armor[0] = boots;
         return armor;
     }
+
 }

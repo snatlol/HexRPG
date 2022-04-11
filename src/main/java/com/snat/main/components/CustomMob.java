@@ -1,12 +1,10 @@
-package com.snat.main.compoments;
+package com.snat.main.components;
 
-import com.snat.main.compoments.LootItem;
+import com.snat.main.components.LootItem;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
@@ -14,22 +12,14 @@ import org.bukkit.inventory.ItemStack;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.snat.main.Utils.color;
 import static com.snat.main.Utils.*;
 
 public enum CustomMob {
 
-    Foul_Zomb("&eFoul Zomb", 25, 60, EntityType.ZOMBIE,
-            createItem(Material.IRON_SWORD, 1, false ,true, true, null),
-            makeArmorSet(new ItemStack(Material.IRON_HELMET), null, null, null),
-            new LootItem(createItem(Material.ROTTEN_FLESH, 1, false, false,
-                    false, "&fPreserved Flesh", "&7A useless flesh from a rotting corspe",
-                    "not sure whatd you want this for tho", "&9Foodstuff"), 1, 3, 100)),
+    DESERT_RISEN("&6Desert Risen", 15, 60, EntityType.HUSK, null, null, new LootItem(createItem(Material.ROTTEN_FLESH, 1, false, false, false, "&9Preserved Flesh", "&7A preserved flesh from a rotting corpse", "&7Not sure what you'd want this for, though", "&7", "&9Foodstuff"), 1, 3, 100)),
 
-    Test_Skel("&9Testing Skelton", 4, 40, EntityType.SKELETON, null, null,
-            new LootItem(createItem(Material.BONE, 1, false, false, false, "&9Special Bone",
-                    "&fCoolest Bone ever", "But it is pretty dumb ngl", "poopyStuff"), 1, 2, 100))
-            ;
-
+    ;
 
     private String name;
     private double maxHealth, spawnChance;
@@ -82,4 +72,5 @@ public enum CustomMob {
     public double getSpawnChance() {
         return spawnChance;
     }
+
 }
