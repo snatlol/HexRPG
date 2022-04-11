@@ -46,7 +46,7 @@ public class Main extends JavaPlugin implements Listener {
 
         //Ranks
         rankManager = new RankManager(this);
-        nameTagManager = new NameTagManager();
+        nameTagManager = new NameTagManager(this);
 
         Bukkit.getPluginManager().registerEvents(new RankListener(this), this);
 
